@@ -4,7 +4,7 @@
   "type" : "widget",
   "custom" : false,
   "modelVersion" : "2.6",
-  "lastUpdate" : 1741226342774,
+  "lastUpdate" : 1742271919865,
   "description" : "Text used to structure the page or form content",
   "template" : "@pbTitle.tpl.html",
   "properties" : [

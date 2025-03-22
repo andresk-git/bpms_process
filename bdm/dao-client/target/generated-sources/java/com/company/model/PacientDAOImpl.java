@@ -2,7 +2,7 @@
 package com.company.model;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -133,7 +133,97 @@ public class PacientDAOImpl
         }
     }
 
-    public List<com.company.model.Pacient> findByDtFechaIngreso(LocalDateTime dtFechaIngreso, int startIndex, int maxResults) {
+    public List<com.company.model.Pacient> findByStrPrestadorSalud(String strPrestadorSalud, int startIndex, int maxResults) {
+        try {
+            CommandAPI commandApi = org.bonitasoft.engine.api.TenantAPIAccessor.getCommandAPI(session);
+            Map<String, Serializable> commandParameters = new HashMap<String, Serializable>();
+            commandParameters.put("queryName", "Pacient.findByStrPrestadorSalud");
+            commandParameters.put("returnsList", true);
+            commandParameters.put("returnType", "com.company.model.Pacient");
+            commandParameters.put("startIndex", startIndex);
+            commandParameters.put("maxResults", maxResults);
+            Map<String, Serializable> queryParameters = new HashMap<String, Serializable>();
+            queryParameters.put("strPrestadorSalud", strPrestadorSalud);
+            commandParameters.put("queryParameters", ((Serializable) queryParameters));
+            return proxyfier.proxify(deserializer.deserializeList(((byte[]) commandApi.execute("executeBDMQuery", commandParameters)), com.company.model.Pacient.class));
+        } catch (Exception e) {
+            throw new IllegalArgumentException(e);
+        }
+    }
+
+    public List<com.company.model.Pacient> findByStrTipoDocAcomp(String strTipoDocAcomp, int startIndex, int maxResults) {
+        try {
+            CommandAPI commandApi = org.bonitasoft.engine.api.TenantAPIAccessor.getCommandAPI(session);
+            Map<String, Serializable> commandParameters = new HashMap<String, Serializable>();
+            commandParameters.put("queryName", "Pacient.findByStrTipoDocAcomp");
+            commandParameters.put("returnsList", true);
+            commandParameters.put("returnType", "com.company.model.Pacient");
+            commandParameters.put("startIndex", startIndex);
+            commandParameters.put("maxResults", maxResults);
+            Map<String, Serializable> queryParameters = new HashMap<String, Serializable>();
+            queryParameters.put("strTipoDocAcomp", strTipoDocAcomp);
+            commandParameters.put("queryParameters", ((Serializable) queryParameters));
+            return proxyfier.proxify(deserializer.deserializeList(((byte[]) commandApi.execute("executeBDMQuery", commandParameters)), com.company.model.Pacient.class));
+        } catch (Exception e) {
+            throw new IllegalArgumentException(e);
+        }
+    }
+
+    public List<com.company.model.Pacient> findByIntNumDocAcomp(Integer intNumDocAcomp, int startIndex, int maxResults) {
+        try {
+            CommandAPI commandApi = org.bonitasoft.engine.api.TenantAPIAccessor.getCommandAPI(session);
+            Map<String, Serializable> commandParameters = new HashMap<String, Serializable>();
+            commandParameters.put("queryName", "Pacient.findByIntNumDocAcomp");
+            commandParameters.put("returnsList", true);
+            commandParameters.put("returnType", "com.company.model.Pacient");
+            commandParameters.put("startIndex", startIndex);
+            commandParameters.put("maxResults", maxResults);
+            Map<String, Serializable> queryParameters = new HashMap<String, Serializable>();
+            queryParameters.put("intNumDocAcomp", intNumDocAcomp);
+            commandParameters.put("queryParameters", ((Serializable) queryParameters));
+            return proxyfier.proxify(deserializer.deserializeList(((byte[]) commandApi.execute("executeBDMQuery", commandParameters)), com.company.model.Pacient.class));
+        } catch (Exception e) {
+            throw new IllegalArgumentException(e);
+        }
+    }
+
+    public List<com.company.model.Pacient> findByStrNombreAcomp(String strNombreAcomp, int startIndex, int maxResults) {
+        try {
+            CommandAPI commandApi = org.bonitasoft.engine.api.TenantAPIAccessor.getCommandAPI(session);
+            Map<String, Serializable> commandParameters = new HashMap<String, Serializable>();
+            commandParameters.put("queryName", "Pacient.findByStrNombreAcomp");
+            commandParameters.put("returnsList", true);
+            commandParameters.put("returnType", "com.company.model.Pacient");
+            commandParameters.put("startIndex", startIndex);
+            commandParameters.put("maxResults", maxResults);
+            Map<String, Serializable> queryParameters = new HashMap<String, Serializable>();
+            queryParameters.put("strNombreAcomp", strNombreAcomp);
+            commandParameters.put("queryParameters", ((Serializable) queryParameters));
+            return proxyfier.proxify(deserializer.deserializeList(((byte[]) commandApi.execute("executeBDMQuery", commandParameters)), com.company.model.Pacient.class));
+        } catch (Exception e) {
+            throw new IllegalArgumentException(e);
+        }
+    }
+
+    public List<com.company.model.Pacient> findByIntCelularAcomp(Integer intCelularAcomp, int startIndex, int maxResults) {
+        try {
+            CommandAPI commandApi = org.bonitasoft.engine.api.TenantAPIAccessor.getCommandAPI(session);
+            Map<String, Serializable> commandParameters = new HashMap<String, Serializable>();
+            commandParameters.put("queryName", "Pacient.findByIntCelularAcomp");
+            commandParameters.put("returnsList", true);
+            commandParameters.put("returnType", "com.company.model.Pacient");
+            commandParameters.put("startIndex", startIndex);
+            commandParameters.put("maxResults", maxResults);
+            Map<String, Serializable> queryParameters = new HashMap<String, Serializable>();
+            queryParameters.put("intCelularAcomp", intCelularAcomp);
+            commandParameters.put("queryParameters", ((Serializable) queryParameters));
+            return proxyfier.proxify(deserializer.deserializeList(((byte[]) commandApi.execute("executeBDMQuery", commandParameters)), com.company.model.Pacient.class));
+        } catch (Exception e) {
+            throw new IllegalArgumentException(e);
+        }
+    }
+
+    public List<com.company.model.Pacient> findByDtFechaIngreso(LocalDate dtFechaIngreso, int startIndex, int maxResults) {
         try {
             CommandAPI commandApi = org.bonitasoft.engine.api.TenantAPIAccessor.getCommandAPI(session);
             Map<String, Serializable> commandParameters = new HashMap<String, Serializable>();
@@ -180,6 +270,42 @@ public class PacientDAOImpl
             commandParameters.put("maxResults", maxResults);
             Map<String, Serializable> queryParameters = new HashMap<String, Serializable>();
             queryParameters.put("intTriage", intTriage);
+            commandParameters.put("queryParameters", ((Serializable) queryParameters));
+            return proxyfier.proxify(deserializer.deserializeList(((byte[]) commandApi.execute("executeBDMQuery", commandParameters)), com.company.model.Pacient.class));
+        } catch (Exception e) {
+            throw new IllegalArgumentException(e);
+        }
+    }
+
+    public List<com.company.model.Pacient> findByStrSignosVitales(String strSignosVitales, int startIndex, int maxResults) {
+        try {
+            CommandAPI commandApi = org.bonitasoft.engine.api.TenantAPIAccessor.getCommandAPI(session);
+            Map<String, Serializable> commandParameters = new HashMap<String, Serializable>();
+            commandParameters.put("queryName", "Pacient.findByStrSignosVitales");
+            commandParameters.put("returnsList", true);
+            commandParameters.put("returnType", "com.company.model.Pacient");
+            commandParameters.put("startIndex", startIndex);
+            commandParameters.put("maxResults", maxResults);
+            Map<String, Serializable> queryParameters = new HashMap<String, Serializable>();
+            queryParameters.put("strSignosVitales", strSignosVitales);
+            commandParameters.put("queryParameters", ((Serializable) queryParameters));
+            return proxyfier.proxify(deserializer.deserializeList(((byte[]) commandApi.execute("executeBDMQuery", commandParameters)), com.company.model.Pacient.class));
+        } catch (Exception e) {
+            throw new IllegalArgumentException(e);
+        }
+    }
+
+    public List<com.company.model.Pacient> findByIntEdad(Integer intEdad, int startIndex, int maxResults) {
+        try {
+            CommandAPI commandApi = org.bonitasoft.engine.api.TenantAPIAccessor.getCommandAPI(session);
+            Map<String, Serializable> commandParameters = new HashMap<String, Serializable>();
+            commandParameters.put("queryName", "Pacient.findByIntEdad");
+            commandParameters.put("returnsList", true);
+            commandParameters.put("returnType", "com.company.model.Pacient");
+            commandParameters.put("startIndex", startIndex);
+            commandParameters.put("maxResults", maxResults);
+            Map<String, Serializable> queryParameters = new HashMap<String, Serializable>();
+            queryParameters.put("intEdad", intEdad);
             commandParameters.put("queryParameters", ((Serializable) queryParameters));
             return proxyfier.proxify(deserializer.deserializeList(((byte[]) commandApi.execute("executeBDMQuery", commandParameters)), com.company.model.Pacient.class));
         } catch (Exception e) {
@@ -241,17 +367,17 @@ public class PacientDAOImpl
         }
     }
 
-    public List<com.company.model.Pacient> findByStrResultadoExamen(String strResultadoExamen, int startIndex, int maxResults) {
+    public List<com.company.model.Pacient> findByStrResultadoLaboratorios(String strResultadoLaboratorios, int startIndex, int maxResults) {
         try {
             CommandAPI commandApi = org.bonitasoft.engine.api.TenantAPIAccessor.getCommandAPI(session);
             Map<String, Serializable> commandParameters = new HashMap<String, Serializable>();
-            commandParameters.put("queryName", "Pacient.findByStrResultadoExamen");
+            commandParameters.put("queryName", "Pacient.findByStrResultadoLaboratorios");
             commandParameters.put("returnsList", true);
             commandParameters.put("returnType", "com.company.model.Pacient");
             commandParameters.put("startIndex", startIndex);
             commandParameters.put("maxResults", maxResults);
             Map<String, Serializable> queryParameters = new HashMap<String, Serializable>();
-            queryParameters.put("strResultadoExamen", strResultadoExamen);
+            queryParameters.put("strResultadoLaboratorios", strResultadoLaboratorios);
             commandParameters.put("queryParameters", ((Serializable) queryParameters));
             return proxyfier.proxify(deserializer.deserializeList(((byte[]) commandApi.execute("executeBDMQuery", commandParameters)), com.company.model.Pacient.class));
         } catch (Exception e) {
@@ -295,24 +421,6 @@ public class PacientDAOImpl
         }
     }
 
-    public List<com.company.model.Pacient> findByStrTratamiento(String strTratamiento, int startIndex, int maxResults) {
-        try {
-            CommandAPI commandApi = org.bonitasoft.engine.api.TenantAPIAccessor.getCommandAPI(session);
-            Map<String, Serializable> commandParameters = new HashMap<String, Serializable>();
-            commandParameters.put("queryName", "Pacient.findByStrTratamiento");
-            commandParameters.put("returnsList", true);
-            commandParameters.put("returnType", "com.company.model.Pacient");
-            commandParameters.put("startIndex", startIndex);
-            commandParameters.put("maxResults", maxResults);
-            Map<String, Serializable> queryParameters = new HashMap<String, Serializable>();
-            queryParameters.put("strTratamiento", strTratamiento);
-            commandParameters.put("queryParameters", ((Serializable) queryParameters));
-            return proxyfier.proxify(deserializer.deserializeList(((byte[]) commandApi.execute("executeBDMQuery", commandParameters)), com.company.model.Pacient.class));
-        } catch (Exception e) {
-            throw new IllegalArgumentException(e);
-        }
-    }
-
     public List<com.company.model.Pacient> findByBCirugia(Boolean bCirugia, int startIndex, int maxResults) {
         try {
             CommandAPI commandApi = org.bonitasoft.engine.api.TenantAPIAccessor.getCommandAPI(session);
@@ -331,17 +439,89 @@ public class PacientDAOImpl
         }
     }
 
-    public List<com.company.model.Pacient> findByBRemiteConsExterna(String bRemiteConsExterna, int startIndex, int maxResults) {
+    public List<com.company.model.Pacient> findByDtFechaCirugia(LocalDate dtFechaCirugia, int startIndex, int maxResults) {
         try {
             CommandAPI commandApi = org.bonitasoft.engine.api.TenantAPIAccessor.getCommandAPI(session);
             Map<String, Serializable> commandParameters = new HashMap<String, Serializable>();
-            commandParameters.put("queryName", "Pacient.findByBRemiteConsExterna");
+            commandParameters.put("queryName", "Pacient.findByDtFechaCirugia");
             commandParameters.put("returnsList", true);
             commandParameters.put("returnType", "com.company.model.Pacient");
             commandParameters.put("startIndex", startIndex);
             commandParameters.put("maxResults", maxResults);
             Map<String, Serializable> queryParameters = new HashMap<String, Serializable>();
-            queryParameters.put("bRemiteConsExterna", bRemiteConsExterna);
+            queryParameters.put("dtFechaCirugia", dtFechaCirugia);
+            commandParameters.put("queryParameters", ((Serializable) queryParameters));
+            return proxyfier.proxify(deserializer.deserializeList(((byte[]) commandApi.execute("executeBDMQuery", commandParameters)), com.company.model.Pacient.class));
+        } catch (Exception e) {
+            throw new IllegalArgumentException(e);
+        }
+    }
+
+    public List<com.company.model.Pacient> findByStrTratamiento(String strTratamiento, int startIndex, int maxResults) {
+        try {
+            CommandAPI commandApi = org.bonitasoft.engine.api.TenantAPIAccessor.getCommandAPI(session);
+            Map<String, Serializable> commandParameters = new HashMap<String, Serializable>();
+            commandParameters.put("queryName", "Pacient.findByStrTratamiento");
+            commandParameters.put("returnsList", true);
+            commandParameters.put("returnType", "com.company.model.Pacient");
+            commandParameters.put("startIndex", startIndex);
+            commandParameters.put("maxResults", maxResults);
+            Map<String, Serializable> queryParameters = new HashMap<String, Serializable>();
+            queryParameters.put("strTratamiento", strTratamiento);
+            commandParameters.put("queryParameters", ((Serializable) queryParameters));
+            return proxyfier.proxify(deserializer.deserializeList(((byte[]) commandApi.execute("executeBDMQuery", commandParameters)), com.company.model.Pacient.class));
+        } catch (Exception e) {
+            throw new IllegalArgumentException(e);
+        }
+    }
+
+    public List<com.company.model.Pacient> findByStrResultadoCirugia(String strResultadoCirugia, int startIndex, int maxResults) {
+        try {
+            CommandAPI commandApi = org.bonitasoft.engine.api.TenantAPIAccessor.getCommandAPI(session);
+            Map<String, Serializable> commandParameters = new HashMap<String, Serializable>();
+            commandParameters.put("queryName", "Pacient.findByStrResultadoCirugia");
+            commandParameters.put("returnsList", true);
+            commandParameters.put("returnType", "com.company.model.Pacient");
+            commandParameters.put("startIndex", startIndex);
+            commandParameters.put("maxResults", maxResults);
+            Map<String, Serializable> queryParameters = new HashMap<String, Serializable>();
+            queryParameters.put("strResultadoCirugia", strResultadoCirugia);
+            commandParameters.put("queryParameters", ((Serializable) queryParameters));
+            return proxyfier.proxify(deserializer.deserializeList(((byte[]) commandApi.execute("executeBDMQuery", commandParameters)), com.company.model.Pacient.class));
+        } catch (Exception e) {
+            throw new IllegalArgumentException(e);
+        }
+    }
+
+    public List<com.company.model.Pacient> findByBAsegCobertura(Boolean bAsegCobertura, int startIndex, int maxResults) {
+        try {
+            CommandAPI commandApi = org.bonitasoft.engine.api.TenantAPIAccessor.getCommandAPI(session);
+            Map<String, Serializable> commandParameters = new HashMap<String, Serializable>();
+            commandParameters.put("queryName", "Pacient.findByBAsegCobertura");
+            commandParameters.put("returnsList", true);
+            commandParameters.put("returnType", "com.company.model.Pacient");
+            commandParameters.put("startIndex", startIndex);
+            commandParameters.put("maxResults", maxResults);
+            Map<String, Serializable> queryParameters = new HashMap<String, Serializable>();
+            queryParameters.put("bAsegCobertura", bAsegCobertura);
+            commandParameters.put("queryParameters", ((Serializable) queryParameters));
+            return proxyfier.proxify(deserializer.deserializeList(((byte[]) commandApi.execute("executeBDMQuery", commandParameters)), com.company.model.Pacient.class));
+        } catch (Exception e) {
+            throw new IllegalArgumentException(e);
+        }
+    }
+
+    public List<com.company.model.Pacient> findByBAsegAutarizaCirugia(Boolean bAsegAutarizaCirugia, int startIndex, int maxResults) {
+        try {
+            CommandAPI commandApi = org.bonitasoft.engine.api.TenantAPIAccessor.getCommandAPI(session);
+            Map<String, Serializable> commandParameters = new HashMap<String, Serializable>();
+            commandParameters.put("queryName", "Pacient.findByBAsegAutarizaCirugia");
+            commandParameters.put("returnsList", true);
+            commandParameters.put("returnType", "com.company.model.Pacient");
+            commandParameters.put("startIndex", startIndex);
+            commandParameters.put("maxResults", maxResults);
+            Map<String, Serializable> queryParameters = new HashMap<String, Serializable>();
+            queryParameters.put("bAsegAutarizaCirugia", bAsegAutarizaCirugia);
             commandParameters.put("queryParameters", ((Serializable) queryParameters));
             return proxyfier.proxify(deserializer.deserializeList(((byte[]) commandApi.execute("executeBDMQuery", commandParameters)), com.company.model.Pacient.class));
         } catch (Exception e) {
@@ -446,7 +626,87 @@ public class PacientDAOImpl
         }
     }
 
-    public Long countForFindByDtFechaIngreso(LocalDateTime dtFechaIngreso) {
+    public Long countForFindByStrPrestadorSalud(String strPrestadorSalud) {
+        try {
+            CommandAPI commandApi = org.bonitasoft.engine.api.TenantAPIAccessor.getCommandAPI(session);
+            Map<String, Serializable> commandParameters = new HashMap<String, Serializable>();
+            commandParameters.put("queryName", "Pacient.countForFindByStrPrestadorSalud");
+            commandParameters.put("returnsList", false);
+            commandParameters.put("returnType", "java.lang.Long");
+            Map<String, Serializable> queryParameters = new HashMap<String, Serializable>();
+            queryParameters.put("strPrestadorSalud", strPrestadorSalud);
+            commandParameters.put("queryParameters", ((Serializable) queryParameters));
+            return ((Long) deserializer.deserialize(((byte[]) commandApi.execute("executeBDMQuery", commandParameters)), Long.class));
+        } catch (Exception e) {
+            throw new IllegalArgumentException(e);
+        }
+    }
+
+    public Long countForFindByStrTipoDocAcomp(String strTipoDocAcomp) {
+        try {
+            CommandAPI commandApi = org.bonitasoft.engine.api.TenantAPIAccessor.getCommandAPI(session);
+            Map<String, Serializable> commandParameters = new HashMap<String, Serializable>();
+            commandParameters.put("queryName", "Pacient.countForFindByStrTipoDocAcomp");
+            commandParameters.put("returnsList", false);
+            commandParameters.put("returnType", "java.lang.Long");
+            Map<String, Serializable> queryParameters = new HashMap<String, Serializable>();
+            queryParameters.put("strTipoDocAcomp", strTipoDocAcomp);
+            commandParameters.put("queryParameters", ((Serializable) queryParameters));
+            return ((Long) deserializer.deserialize(((byte[]) commandApi.execute("executeBDMQuery", commandParameters)), Long.class));
+        } catch (Exception e) {
+            throw new IllegalArgumentException(e);
+        }
+    }
+
+    public Long countForFindByIntNumDocAcomp(Integer intNumDocAcomp) {
+        try {
+            CommandAPI commandApi = org.bonitasoft.engine.api.TenantAPIAccessor.getCommandAPI(session);
+            Map<String, Serializable> commandParameters = new HashMap<String, Serializable>();
+            commandParameters.put("queryName", "Pacient.countForFindByIntNumDocAcomp");
+            commandParameters.put("returnsList", false);
+            commandParameters.put("returnType", "java.lang.Long");
+            Map<String, Serializable> queryParameters = new HashMap<String, Serializable>();
+            queryParameters.put("intNumDocAcomp", intNumDocAcomp);
+            commandParameters.put("queryParameters", ((Serializable) queryParameters));
+            return ((Long) deserializer.deserialize(((byte[]) commandApi.execute("executeBDMQuery", commandParameters)), Long.class));
+        } catch (Exception e) {
+            throw new IllegalArgumentException(e);
+        }
+    }
+
+    public Long countForFindByStrNombreAcomp(String strNombreAcomp) {
+        try {
+            CommandAPI commandApi = org.bonitasoft.engine.api.TenantAPIAccessor.getCommandAPI(session);
+            Map<String, Serializable> commandParameters = new HashMap<String, Serializable>();
+            commandParameters.put("queryName", "Pacient.countForFindByStrNombreAcomp");
+            commandParameters.put("returnsList", false);
+            commandParameters.put("returnType", "java.lang.Long");
+            Map<String, Serializable> queryParameters = new HashMap<String, Serializable>();
+            queryParameters.put("strNombreAcomp", strNombreAcomp);
+            commandParameters.put("queryParameters", ((Serializable) queryParameters));
+            return ((Long) deserializer.deserialize(((byte[]) commandApi.execute("executeBDMQuery", commandParameters)), Long.class));
+        } catch (Exception e) {
+            throw new IllegalArgumentException(e);
+        }
+    }
+
+    public Long countForFindByIntCelularAcomp(Integer intCelularAcomp) {
+        try {
+            CommandAPI commandApi = org.bonitasoft.engine.api.TenantAPIAccessor.getCommandAPI(session);
+            Map<String, Serializable> commandParameters = new HashMap<String, Serializable>();
+            commandParameters.put("queryName", "Pacient.countForFindByIntCelularAcomp");
+            commandParameters.put("returnsList", false);
+            commandParameters.put("returnType", "java.lang.Long");
+            Map<String, Serializable> queryParameters = new HashMap<String, Serializable>();
+            queryParameters.put("intCelularAcomp", intCelularAcomp);
+            commandParameters.put("queryParameters", ((Serializable) queryParameters));
+            return ((Long) deserializer.deserialize(((byte[]) commandApi.execute("executeBDMQuery", commandParameters)), Long.class));
+        } catch (Exception e) {
+            throw new IllegalArgumentException(e);
+        }
+    }
+
+    public Long countForFindByDtFechaIngreso(LocalDate dtFechaIngreso) {
         try {
             CommandAPI commandApi = org.bonitasoft.engine.api.TenantAPIAccessor.getCommandAPI(session);
             Map<String, Serializable> commandParameters = new HashMap<String, Serializable>();
@@ -487,6 +747,38 @@ public class PacientDAOImpl
             commandParameters.put("returnType", "java.lang.Long");
             Map<String, Serializable> queryParameters = new HashMap<String, Serializable>();
             queryParameters.put("intTriage", intTriage);
+            commandParameters.put("queryParameters", ((Serializable) queryParameters));
+            return ((Long) deserializer.deserialize(((byte[]) commandApi.execute("executeBDMQuery", commandParameters)), Long.class));
+        } catch (Exception e) {
+            throw new IllegalArgumentException(e);
+        }
+    }
+
+    public Long countForFindByStrSignosVitales(String strSignosVitales) {
+        try {
+            CommandAPI commandApi = org.bonitasoft.engine.api.TenantAPIAccessor.getCommandAPI(session);
+            Map<String, Serializable> commandParameters = new HashMap<String, Serializable>();
+            commandParameters.put("queryName", "Pacient.countForFindByStrSignosVitales");
+            commandParameters.put("returnsList", false);
+            commandParameters.put("returnType", "java.lang.Long");
+            Map<String, Serializable> queryParameters = new HashMap<String, Serializable>();
+            queryParameters.put("strSignosVitales", strSignosVitales);
+            commandParameters.put("queryParameters", ((Serializable) queryParameters));
+            return ((Long) deserializer.deserialize(((byte[]) commandApi.execute("executeBDMQuery", commandParameters)), Long.class));
+        } catch (Exception e) {
+            throw new IllegalArgumentException(e);
+        }
+    }
+
+    public Long countForFindByIntEdad(Integer intEdad) {
+        try {
+            CommandAPI commandApi = org.bonitasoft.engine.api.TenantAPIAccessor.getCommandAPI(session);
+            Map<String, Serializable> commandParameters = new HashMap<String, Serializable>();
+            commandParameters.put("queryName", "Pacient.countForFindByIntEdad");
+            commandParameters.put("returnsList", false);
+            commandParameters.put("returnType", "java.lang.Long");
+            Map<String, Serializable> queryParameters = new HashMap<String, Serializable>();
+            queryParameters.put("intEdad", intEdad);
             commandParameters.put("queryParameters", ((Serializable) queryParameters));
             return ((Long) deserializer.deserialize(((byte[]) commandApi.execute("executeBDMQuery", commandParameters)), Long.class));
         } catch (Exception e) {
@@ -542,15 +834,15 @@ public class PacientDAOImpl
         }
     }
 
-    public Long countForFindByStrResultadoExamen(String strResultadoExamen) {
+    public Long countForFindByStrResultadoLaboratorios(String strResultadoLaboratorios) {
         try {
             CommandAPI commandApi = org.bonitasoft.engine.api.TenantAPIAccessor.getCommandAPI(session);
             Map<String, Serializable> commandParameters = new HashMap<String, Serializable>();
-            commandParameters.put("queryName", "Pacient.countForFindByStrResultadoExamen");
+            commandParameters.put("queryName", "Pacient.countForFindByStrResultadoLaboratorios");
             commandParameters.put("returnsList", false);
             commandParameters.put("returnType", "java.lang.Long");
             Map<String, Serializable> queryParameters = new HashMap<String, Serializable>();
-            queryParameters.put("strResultadoExamen", strResultadoExamen);
+            queryParameters.put("strResultadoLaboratorios", strResultadoLaboratorios);
             commandParameters.put("queryParameters", ((Serializable) queryParameters));
             return ((Long) deserializer.deserialize(((byte[]) commandApi.execute("executeBDMQuery", commandParameters)), Long.class));
         } catch (Exception e) {
@@ -590,22 +882,6 @@ public class PacientDAOImpl
         }
     }
 
-    public Long countForFindByStrTratamiento(String strTratamiento) {
-        try {
-            CommandAPI commandApi = org.bonitasoft.engine.api.TenantAPIAccessor.getCommandAPI(session);
-            Map<String, Serializable> commandParameters = new HashMap<String, Serializable>();
-            commandParameters.put("queryName", "Pacient.countForFindByStrTratamiento");
-            commandParameters.put("returnsList", false);
-            commandParameters.put("returnType", "java.lang.Long");
-            Map<String, Serializable> queryParameters = new HashMap<String, Serializable>();
-            queryParameters.put("strTratamiento", strTratamiento);
-            commandParameters.put("queryParameters", ((Serializable) queryParameters));
-            return ((Long) deserializer.deserialize(((byte[]) commandApi.execute("executeBDMQuery", commandParameters)), Long.class));
-        } catch (Exception e) {
-            throw new IllegalArgumentException(e);
-        }
-    }
-
     public Long countForFindByBCirugia(Boolean bCirugia) {
         try {
             CommandAPI commandApi = org.bonitasoft.engine.api.TenantAPIAccessor.getCommandAPI(session);
@@ -622,15 +898,79 @@ public class PacientDAOImpl
         }
     }
 
-    public Long countForFindByBRemiteConsExterna(String bRemiteConsExterna) {
+    public Long countForFindByDtFechaCirugia(LocalDate dtFechaCirugia) {
         try {
             CommandAPI commandApi = org.bonitasoft.engine.api.TenantAPIAccessor.getCommandAPI(session);
             Map<String, Serializable> commandParameters = new HashMap<String, Serializable>();
-            commandParameters.put("queryName", "Pacient.countForFindByBRemiteConsExterna");
+            commandParameters.put("queryName", "Pacient.countForFindByDtFechaCirugia");
             commandParameters.put("returnsList", false);
             commandParameters.put("returnType", "java.lang.Long");
             Map<String, Serializable> queryParameters = new HashMap<String, Serializable>();
-            queryParameters.put("bRemiteConsExterna", bRemiteConsExterna);
+            queryParameters.put("dtFechaCirugia", dtFechaCirugia);
+            commandParameters.put("queryParameters", ((Serializable) queryParameters));
+            return ((Long) deserializer.deserialize(((byte[]) commandApi.execute("executeBDMQuery", commandParameters)), Long.class));
+        } catch (Exception e) {
+            throw new IllegalArgumentException(e);
+        }
+    }
+
+    public Long countForFindByStrTratamiento(String strTratamiento) {
+        try {
+            CommandAPI commandApi = org.bonitasoft.engine.api.TenantAPIAccessor.getCommandAPI(session);
+            Map<String, Serializable> commandParameters = new HashMap<String, Serializable>();
+            commandParameters.put("queryName", "Pacient.countForFindByStrTratamiento");
+            commandParameters.put("returnsList", false);
+            commandParameters.put("returnType", "java.lang.Long");
+            Map<String, Serializable> queryParameters = new HashMap<String, Serializable>();
+            queryParameters.put("strTratamiento", strTratamiento);
+            commandParameters.put("queryParameters", ((Serializable) queryParameters));
+            return ((Long) deserializer.deserialize(((byte[]) commandApi.execute("executeBDMQuery", commandParameters)), Long.class));
+        } catch (Exception e) {
+            throw new IllegalArgumentException(e);
+        }
+    }
+
+    public Long countForFindByStrResultadoCirugia(String strResultadoCirugia) {
+        try {
+            CommandAPI commandApi = org.bonitasoft.engine.api.TenantAPIAccessor.getCommandAPI(session);
+            Map<String, Serializable> commandParameters = new HashMap<String, Serializable>();
+            commandParameters.put("queryName", "Pacient.countForFindByStrResultadoCirugia");
+            commandParameters.put("returnsList", false);
+            commandParameters.put("returnType", "java.lang.Long");
+            Map<String, Serializable> queryParameters = new HashMap<String, Serializable>();
+            queryParameters.put("strResultadoCirugia", strResultadoCirugia);
+            commandParameters.put("queryParameters", ((Serializable) queryParameters));
+            return ((Long) deserializer.deserialize(((byte[]) commandApi.execute("executeBDMQuery", commandParameters)), Long.class));
+        } catch (Exception e) {
+            throw new IllegalArgumentException(e);
+        }
+    }
+
+    public Long countForFindByBAsegCobertura(Boolean bAsegCobertura) {
+        try {
+            CommandAPI commandApi = org.bonitasoft.engine.api.TenantAPIAccessor.getCommandAPI(session);
+            Map<String, Serializable> commandParameters = new HashMap<String, Serializable>();
+            commandParameters.put("queryName", "Pacient.countForFindByBAsegCobertura");
+            commandParameters.put("returnsList", false);
+            commandParameters.put("returnType", "java.lang.Long");
+            Map<String, Serializable> queryParameters = new HashMap<String, Serializable>();
+            queryParameters.put("bAsegCobertura", bAsegCobertura);
+            commandParameters.put("queryParameters", ((Serializable) queryParameters));
+            return ((Long) deserializer.deserialize(((byte[]) commandApi.execute("executeBDMQuery", commandParameters)), Long.class));
+        } catch (Exception e) {
+            throw new IllegalArgumentException(e);
+        }
+    }
+
+    public Long countForFindByBAsegAutarizaCirugia(Boolean bAsegAutarizaCirugia) {
+        try {
+            CommandAPI commandApi = org.bonitasoft.engine.api.TenantAPIAccessor.getCommandAPI(session);
+            Map<String, Serializable> commandParameters = new HashMap<String, Serializable>();
+            commandParameters.put("queryName", "Pacient.countForFindByBAsegAutarizaCirugia");
+            commandParameters.put("returnsList", false);
+            commandParameters.put("returnType", "java.lang.Long");
+            Map<String, Serializable> queryParameters = new HashMap<String, Serializable>();
+            queryParameters.put("bAsegAutarizaCirugia", bAsegAutarizaCirugia);
             commandParameters.put("queryParameters", ((Serializable) queryParameters));
             return ((Long) deserializer.deserialize(((byte[]) commandApi.execute("executeBDMQuery", commandParameters)), Long.class));
         } catch (Exception e) {

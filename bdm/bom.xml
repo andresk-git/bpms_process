@@ -8,18 +8,28 @@
                 <field type="STRING" length="255" name="strNombreApellido" nullable="true" collection="false"/>
                 <field type="STRING" length="255" name="strEmail" nullable="true" collection="false"/>
                 <field type="INTEGER" length="255" name="intCelular" nullable="true" collection="false"/>
-                <field type="LOCALDATETIME" length="255" name="dtFechaIngreso" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="strPrestadorSalud" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="strTipoDocAcomp" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="intNumDocAcomp" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="strNombreAcomp" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="intCelularAcomp" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="dtFechaIngreso" nullable="true" collection="false"/>
                 <field type="STRING" length="255" name="strMotivoConsulta" nullable="true" collection="false"/>
                 <field type="INTEGER" length="255" name="intTriage" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="strSignosVitales" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="intEdad" nullable="true" collection="false"/>
                 <field type="STRING" length="255" name="strEvaluacionMedico" nullable="true" collection="false"/>
                 <field type="BOOLEAN" length="255" name="bExamen" nullable="true" collection="false"/>
                 <field type="STRING" length="255" name="strExamenSolicitado" nullable="true" collection="false"/>
-                <field type="STRING" length="255" name="strResultadoExamen" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="strResultadoLaboratorios" nullable="true" collection="false"/>
                 <field type="BOOLEAN" length="255" name="bDiagnostico" nullable="true" collection="false"/>
                 <field type="STRING" length="255" name="strDiagnostico" nullable="true" collection="false"/>
-                <field type="STRING" length="255" name="strTratamiento" nullable="true" collection="false"/>
                 <field type="BOOLEAN" length="255" name="bCirugia" nullable="true" collection="false"/>
-                <field type="STRING" length="255" name="bRemiteConsExterna" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="dtFechaCirugia" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="strTratamiento" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="strResultadoCirugia" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="bAsegCobertura" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="bAsegAutarizaCirugia" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>

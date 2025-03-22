@@ -4,7 +4,7 @@
   "type" : "widget",
   "custom" : false,
   "modelVersion" : "2.6",
-  "lastUpdate" : 1741226342365,
+  "lastUpdate" : 1742271919828,
   "description" : "Tabular presentation of data from an array",
   "template" : "@pbTable.tpl.html",
   "controller" : "@pbTable.ctrl.js",

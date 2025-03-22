@@ -4,7 +4,7 @@
   "type" : "widget",
   "custom" : false,
   "modelVersion" : "2.6",
-  "lastUpdate" : 1741226340360,
+  "lastUpdate" : 1742271919737,
   "description" : "Set of buttons for mutually exclusive options. The user selects one option",
   "template" : "@pbRadioButtons.tpl.html",
   "controller" : "@pbRadioButtons.ctrl.js",

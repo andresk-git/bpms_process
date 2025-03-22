@@ -4,7 +4,7 @@
   "type" : "widget",
   "custom" : false,
   "modelVersion" : "2.6",
-  "lastUpdate" : 1741226336888,
+  "lastUpdate" : 1742271919549,
   "description" : "Field where the user can enter information with a currency formatting.",
   "template" : "@pbCurrencyInput.tpl.html",
   "controller" : "@pbCurrencyInput.ctrl.js",

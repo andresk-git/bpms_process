@@ -4,7 +4,7 @@
   "type" : "widget",
   "custom" : false,
   "modelVersion" : "2.6",
-  "lastUpdate" : 1741226340407,
+  "lastUpdate" : 1742271919754,
   "description" : "Expendable text input field with HTML formatting, including style, image, links... This widget is based on textAngular.",
   "template" : "@pbRichTextarea.tpl.html",
   "controller" : "@pbRichTextarea.ctrl.js",

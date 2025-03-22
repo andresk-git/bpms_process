@@ -1,6 +1,6 @@
 #FileLock
-#Sun Mar 16 19:45:40 COT 2025
-server=192.168.1.15\:49555
-hostName=Ian-PC
+#Sat Mar 22 13:01:36 COT 2025
+server=10.106.20.125\:57281
+hostName=10.106.20.125
 method=file
-id=195a1904278d92afa6f3a557a861b0b82e13d365808
+id=195bf047a8d8d8e20d556e8f63fa8a431c1812a1087

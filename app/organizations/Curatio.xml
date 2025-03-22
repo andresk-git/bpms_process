@@ -2,15 +2,7 @@
 <organization:Organization xmlns:organization="http://documentation.bonitasoft.com/organization-xml-schema/1.1">
   <customUserInfoDefinitions/>
   <users>
-    <user userName="walter.bates">
-      <firstName>Walter</firstName>
-      <lastName>Bates</lastName>
-      <personalData/>
-      <professionalData/>
-      <password encrypted="false">bpm</password>
-      <customUserInfoValues/>
-    </user>
-    <user userName="helen.kelly">
+    <user userName="paciente1">
       <firstName>Helen</firstName>
       <lastName>Kelly</lastName>
       <personalData/>
@@ -18,7 +10,7 @@
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
-    <user userName="april.sanchez">
+    <user userName="admision1">
       <firstName>April</firstName>
       <lastName>Sanchez</lastName>
       <personalData/>
@@ -26,7 +18,7 @@
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
-    <user userName="mauro.zetticci">
+    <user userName="admision2">
       <firstName>Mauro</firstName>
       <lastName>Zetticci</lastName>
       <personalData/>
@@ -34,7 +26,7 @@
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
-    <user userName="thomas.wallis">
+    <user userName="medico1">
       <firstName>Thomas</firstName>
       <lastName>Wallis</lastName>
       <personalData/>
@@ -42,9 +34,25 @@
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
-    <user userName="michael.morrison">
+    <user userName="aseguradora1">
       <firstName>Michael</firstName>
       <lastName>Morrison</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="Cirujano">
+      <firstName>Isabel</firstName>
+      <lastName>Caceres</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="Laboratorio1">
+      <firstName>Duvan</firstName>
+      <lastName>Motavita</lastName>
       <personalData/>
       <professionalData/>
       <password encrypted="false">bpm</password>
@@ -72,40 +80,56 @@
     <group name="admision" parentPath="/curatio">
       <displayName>Admision</displayName>
     </group>
+    <group name="Cirujano" parentPath="/curatio">
+      <displayName>Cirujano</displayName>
+    </group>
+    <group name="Enfermeria" parentPath="/curatio">
+      <displayName>Enfermeria</displayName>
+    </group>
+    <group name="Laboratorios" parentPath="/curatio">
+      <displayName>Laboratorios</displayName>
+    </group>
   </groups>
   <memberships>
     <membership>
-      <userName>walter.bates</userName>
+      <userName>paciente1</userName>
       <roleName>member</roleName>
       <groupName>cliente</groupName>
     </membership>
     <membership>
-      <userName>helen.kelly</userName>
-      <roleName>member</roleName>
-      <groupName>cliente</groupName>
-    </membership>
-    <membership>
-      <userName>april.sanchez</userName>
+      <userName>admision1</userName>
       <roleName>member</roleName>
       <groupName>admision</groupName>
       <groupParentPath>/curatio</groupParentPath>
     </membership>
     <membership>
-      <userName>mauro.zetticci</userName>
+      <userName>admision2</userName>
       <roleName>member</roleName>
       <groupName>admision</groupName>
       <groupParentPath>/curatio</groupParentPath>
     </membership>
     <membership>
-      <userName>thomas.wallis</userName>
+      <userName>medico1</userName>
       <roleName>member</roleName>
       <groupName>medico</groupName>
       <groupParentPath>/curatio</groupParentPath>
     </membership>
     <membership>
-      <userName>michael.morrison</userName>
+      <userName>aseguradora1</userName>
       <roleName>member</roleName>
       <groupName>aseguradora</groupName>
+    </membership>
+    <membership>
+      <userName>Cirujano</userName>
+      <roleName>member</roleName>
+      <groupName>Cirujano</groupName>
+      <groupParentPath>/curatio</groupParentPath>
+    </membership>
+    <membership>
+      <userName>Laboratorio1</userName>
+      <roleName>member</roleName>
+      <groupName>Laboratorios</groupName>
+      <groupParentPath>/curatio</groupParentPath>
     </membership>
   </memberships>
 </organization:Organization>
