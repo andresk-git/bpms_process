@@ -4,7 +4,7 @@
   "type" : "widget",
   "custom" : false,
   "modelVersion" : "2.6",
-  "lastUpdate" : 1741226342743,
+  "lastUpdate" : 1742663996669,
   "description" : "Multi-line, expandable, text input field",
   "template" : "@pbTextarea.tpl.html",
   "controller" : "@pbTextarea.ctrl.js",

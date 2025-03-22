@@ -10,7 +10,7 @@
         </elements>
       </elements>
       <elements xmi:type="process:Lane" xmi:id="_jRYLIPx1Ee-YGPsWgbHGzg" name="Admisión" actor="_EPP6kPybEe-YGPsWgbHGzg">
-        <elements xmi:type="process:Task" xmi:id="_Z-rQt_x1Ee-YGPsWgbHGzg" name="Atender paciente y evaluar" outgoing="_z0fYIPx1Ee-YGPsWgbHGzg" incoming="_Z-r3x_x1Ee-YGPsWgbHGzg" overrideActorsOfTheLane="false">
+        <elements xmi:type="process:Task" xmi:id="_Z-rQt_x1Ee-YGPsWgbHGzg" name="TEST" outgoing="_z0fYIPx1Ee-YGPsWgbHGzg" incoming="_Z-r3x_x1Ee-YGPsWgbHGzg" overrideActorsOfTheLane="false">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_Z-rQuPx1Ee-YGPsWgbHGzg" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_Z-rQufx1Ee-YGPsWgbHGzg" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_Z-rQuvx1Ee-YGPsWgbHGzg" name="" content="" returnTypeFixed="true"/>

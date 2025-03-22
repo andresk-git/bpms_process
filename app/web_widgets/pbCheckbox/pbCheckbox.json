@@ -4,7 +4,7 @@
   "type" : "widget",
   "custom" : false,
   "modelVersion" : "2.6",
-  "lastUpdate" : 1741226336747,
+  "lastUpdate" : 1742663996642,
   "description" : "Unique checkbox for an option. The user checks it or not",
   "template" : "@pbCheckbox.tpl.html",
   "controller" : "@pbCheckbox.ctrl.js",
